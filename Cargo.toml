@@ -6,3 +6,12 @@ edition = "2021"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
+
+
+# Profile for `cargo build`.
+[profile.dev]
+panic = "abort"     # disable stack unwinding
+
+# Profile for `cargo build --release`.
+[profile.release]
+panic = "abort"     # disable stack unwinding
