@@ -1,12 +1,12 @@
+# Info about this OS kernel project.
 [package]
 name = "rux-kernel"
 version = "0.1.0"
 edition = "2021"
+build = "scripts/ldflag.rs"
 
-# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
-
+# Dependencies on other cargo crates.
 [dependencies]
-
 
 # Profile for `cargo build`.
 [profile.dev]
@@ -15,3 +15,10 @@ panic = "abort"     # disable stack unwinding
 # Profile for `cargo build --release`.
 [profile.release]
 panic = "abort"     # disable stack unwinding
+
+# Using `kernel.rs` as the main file.
+[[bin]]
+name = "rux"
+path = "src/kernel.rs"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html

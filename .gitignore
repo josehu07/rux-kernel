@@ -1,1 +1,6 @@
 /target
+
+*.bin
+
+isodir/
+*.iso

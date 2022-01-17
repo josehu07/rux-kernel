@@ -26,24 +26,24 @@ If there are any typos / mistakes / errors, please raise an issue!
 
 Requires a Linux host development environment. Tested on Ubuntu Focal.
 
-Clone the repo, set up a Rust development toolchain following [this book chapter](https://doc.rust-lang.org/book/ch01-01-installation.html), then build Rux by:
+Clone the repo, set up the Rust development toolchain following [this wiki page](https://github.com/josehu07/rux-kernel/wiki/02.-Rust-Development-Setup), then build Rux by:
 
 ```bash
-$ cargo TODO
+$ make
 ```
 
 <!-- Or, if you just want to try out Rux without a development toolchain, download both the [released](https://github.com/josehu07/rux-kernel/releases) kernel image `rux.iso` and the initial file system image `vsfs.img` (256MB) to the folder. -->
 
-To run Rux in QEMU **>= v6.2.0**, install QEMU & GRUB following [this wiki section](https://github.com/josehu07/hux-kernel/wiki/02.-The-Very-First-Skeleton#qemu-emulator--grub-bootloader) of Hux, then do:
+To run Rux in QEMU **>= v6.2.0**, install QEMU & GRUB following [this wiki section](https://github.com/josehu07/rux-kernel/wiki/02.-Rust-Development-Setup#qemu-emulator--grub-bootloader), then do:
 
 ```bash
-$ cargo run TODO    # opens a VGA GUI window
+$ make qemu     # opens a VGA GUI window
 ```
 
 If you are in a non-GUI environment, it is recommended to redirect VGA output to built-in VNC server, and connect to that server from a VNC client:
 
 ```bash
-$ cargo run TODO    # redirects VGA output to VNC server
+$ make qemu_vnc     # redirects VGA output to VNC server
                     # from VNC client, connect to 'hostname:5901'
 ```
 
