@@ -4,3 +4,8 @@
 
 isodir/
 *.iso
+
+.vagrant/
+Vagrantfile
+
+**/.DS_Store
