@@ -50,6 +50,7 @@ $ make qemu_vnc     # redirects VGA output to VNC server
 You will see the QEMU GUI popping up with GRUB loaded. Choose the "`Rux`" option with <kbd>Enter</kbd> to boot into Rux.
 
 <!-- <p align=center> <img src="README-demo.gif" width=720px align=center /> </p> -->
+<p align=center> <img src="README-demo.png" width=720px align=center /> </p>
 
 For a taste of what a minimal C kernel looks like, please check out the wiki pages of Hux (recommended). I have every single detail documented there.
 
