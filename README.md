@@ -29,7 +29,7 @@ Requires a Linux host development environment. Tested on Ubuntu Focal.
 Clone the repo, set up the Rust development toolchain following [this wiki page](https://github.com/josehu07/rux-kernel/wiki/02.-Rust-Development-Setup), then build Rux by:
 
 ```bash
-$ make
+$ make [debug|release]  # defaults to debug
 ```
 
 <!-- Or, if you just want to try out Rux without a development toolchain, download both the [released](https://github.com/josehu07/rux-kernel/releases) kernel image `rux.iso` and the initial file system image `vsfs.img` (256MB) to the folder. -->
