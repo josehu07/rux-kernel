@@ -1,6 +1,7 @@
 /**
- * AT&T syntax (GAS) x86 IA32 booting code, following the OSDev wiki on
- * https://wiki.osdev.org/Bare_Bones.
+ * AT&T syntax (GAS) x86_64 booting code, following the OSDev wiki on
+ * https://wiki.osdev.org/Bare_Bones. Enters 64-bit long mode before jumping
+ * to kernel main function.
  */
 
 
@@ -75,15 +76,16 @@ _start:
      * puts everything above 1MiB, so the A20 line must have been enabled
      * for code here to execute!).
      */
+    
+    /**
+     * Setup initial dummy paging and enter x86_64 long mode. This is required
+     * because the main function written in rust is compiled for x86_64 target,
+     * hence we must be in 64-bit mode before calling `kernel_main`.
+     */
+    /** FIXME: implement this. */
 
     /** Setup the kernel stack by setting ESP to our 'stack_hi' symbol. */
     movl $stack_hi, %esp
-
-    /**
-     * Other processor state modifications and runtime supports (such as
-     * enabling paging) should go here. Make sure your ESP is still 16 Bytes
-     * aligned.
-     */
     
     /** Set EBP to NULL for stack tracing's use. */
     xor %ebp, %ebp

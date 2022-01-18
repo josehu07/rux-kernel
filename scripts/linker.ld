@@ -24,23 +24,23 @@ SECTIONS
 
     .text ALIGN(4K):        /** Align to 4KiB boundary. */
     {
-        *(.text)
-        *(.comment)
+        *(.text*)
+        *(.comment*)
     }
 
     .rodata ALIGN(4K):
     {
-        *(.rodata)
+        *(.rodata*)
     }
 
     .data ALIGN(4K):
     {
-        *(.data)
+        *(.data*)
     }
 
     .bss ALIGN(4K):
     {
-        *(.bss)     /** Includes our 16KiB temporary stack. */
+        *(.bss*)    /** Includes our 16KiB temporary stack. */
         *(COMMON)
     }
 }

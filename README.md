@@ -73,4 +73,5 @@ Check the "References" section of Hux [here](https://github.com/josehu07/hux-ker
 ## TODO List
 
 - [x] Dev setup following Philipp's blog
+- [ ] Enter long mode in `boot.s` (w/ dummy paging)
 - [ ] Start the porting of Hux kernel

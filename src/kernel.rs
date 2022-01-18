@@ -7,7 +7,7 @@
 
 
 use core::panic::PanicInfo;
-use core::arch::global_asm;
+use core::arch::{global_asm, asm};
 
 
 // Include bootstrapping code `boot.s`.

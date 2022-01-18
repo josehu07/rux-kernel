@@ -78,14 +78,14 @@ update:
 qemu:
 	@echo
 	@echo $(RUX_MSG) "Launching QEMU..."
-	qemu-system-i386 $(QEMU_OPTS)
+	qemu-system-x86_64 $(QEMU_OPTS)
 
 .PHONY: qemu_vnc
 qemu_vnc:
 	@echo
 	@echo $(RUX_MSG) "Launching QEMU (vnc display)..."
 	@echo $(RUX_MSG) "Please connect to 'localhost:5901' in VNC viewer client"
-	qemu-system-i386 $(QEMU_OPTS) -display vnc=localhost:1
+	qemu-system-x86_64 $(QEMU_OPTS) -display vnc=localhost:1
 
 
 #
